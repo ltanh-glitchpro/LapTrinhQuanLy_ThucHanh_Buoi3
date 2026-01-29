@@ -107,7 +107,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(749, 88);
+            btnThoat.Location = new Point(680, 92);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // btnHuybo
             // 
-            btnHuybo.Location = new Point(644, 88);
+            btnHuybo.Location = new Point(580, 91);
             btnHuybo.Name = "btnHuybo";
             btnHuybo.Size = new Size(94, 29);
             btnHuybo.TabIndex = 6;
@@ -128,7 +128,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = Color.Blue;
-            btnLuu.Location = new Point(749, 53);
+            btnLuu.Location = new Point(680, 57);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(94, 29);
             btnLuu.TabIndex = 5;
@@ -139,7 +139,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(539, 88);
+            btnXoa.Location = new Point(480, 86);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(94, 29);
             btnXoa.TabIndex = 4;
@@ -149,7 +149,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(644, 53);
+            btnSua.Location = new Point(580, 53);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 3;
@@ -159,7 +159,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(539, 53);
+            btnThem.Location = new Point(480, 52);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 2;
