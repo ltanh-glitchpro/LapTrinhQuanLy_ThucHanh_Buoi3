@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnXoa = new Button();
             gpbThongTinSanPham = new GroupBox();
             btnDoiAnh = new Button();
@@ -265,6 +266,7 @@
             btnThoat.TabIndex = 7;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnHuybo
             // 
@@ -369,7 +371,6 @@
             SoLuong.HeaderText = "Số lượng";
             SoLuong.MinimumWidth = 6;
             SoLuong.Name = "SoLuong";
-            SoLuong.DefaultCellStyle = new DataGridViewCellStyle { Alignment = DataGridViewContentAlignment.MiddleRight, Format = "N0" };
             // 
             // DonGia
             // 
@@ -377,17 +378,16 @@
             DonGia.HeaderText = "Đơn giá";
             DonGia.MinimumWidth = 6;
             DonGia.Name = "DonGia";
-            DonGia.DefaultCellStyle = new DataGridViewCellStyle { Alignment = DataGridViewContentAlignment.MiddleRight, Format = "N0" };
             // 
             // HinhAnh
             // 
             HinhAnh.DataPropertyName = "HinhAnh";
+            HinhAnh.DefaultCellStyle = dataGridViewCellStyle1;
+            HinhAnh.FillWeight = 20F;
             HinhAnh.HeaderText = "Hình ảnh";
+            HinhAnh.ImageLayout = DataGridViewImageCellLayout.Zoom;
             HinhAnh.MinimumWidth = 6;
             HinhAnh.Name = "HinhAnh";
-            HinhAnh.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            HinhAnh.DefaultCellStyle = new DataGridViewCellStyle { Alignment = DataGridViewContentAlignment.MiddleCenter, NullValue = null };
-            HinhAnh.FillWeight = 20F;
             // 
             // gpbDanhSach
             // 

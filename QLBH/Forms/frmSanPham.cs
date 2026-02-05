@@ -200,15 +200,18 @@ namespace QLBH.Forms
             {
                 if (xuLyThem)
                 {
+                    int loaiId = cboLoaiSanPham.SelectedValue != null ? Convert.ToInt32(cboLoaiSanPham.SelectedValue) : 0;
+                    int hangId = cboHangSanXuat.SelectedValue != null ? Convert.ToInt32(cboHangSanXuat.SelectedValue) : 0;
+
                     SanPham sp = new SanPham
                     {
-                        LoaiSanPhamID = (int)cboLoaiSanPham.SelectedValue,
-                        HangSanXuatID = (int)cboHangSanXuat.SelectedValue,
+                        LoaiSanPhamID = loaiId,
+                        HangSanXuatID = hangId,
                         TenSanPham = txtTenSanPham.Text,
                         MoTa = txtMoTa.Text,
                         SoLuong = (int)numSoLuong.Value,
                         DonGia = (int)numDonGia.Value,
-                        HinhAnh = picHinhAnh.ImageLocation != null
+                        HinhAnh = !string.IsNullOrWhiteSpace(picHinhAnh?.ImageLocation)
                                     ? Path.GetFileName(picHinhAnh.ImageLocation)
                                     : null
                     };
@@ -222,14 +225,18 @@ namespace QLBH.Forms
                     SanPham sp = context.SanPham.Find(id);
                     if (sp != null)
                     {
-                        sp.LoaiSanPhamID = (int)cboLoaiSanPham.SelectedValue;
-                        sp.HangSanXuatID = (int)cboHangSanXuat.SelectedValue;
+                        if (cboLoaiSanPham.SelectedValue != null)
+                            sp.LoaiSanPhamID = Convert.ToInt32(cboLoaiSanPham.SelectedValue);
+
+                        if (cboHangSanXuat.SelectedValue != null)
+                            sp.HangSanXuatID = Convert.ToInt32(cboHangSanXuat.SelectedValue);
+
                         sp.TenSanPham = txtTenSanPham.Text;
                         sp.MoTa = txtMoTa.Text;
                         sp.SoLuong = (int)numSoLuong.Value;
                         sp.DonGia = (int)numDonGia.Value;
 
-                        if (picHinhAnh.ImageLocation != null)
+                        if (!string.IsNullOrWhiteSpace(picHinhAnh?.ImageLocation))
                             sp.HinhAnh = Path.GetFileName(picHinhAnh.ImageLocation);
 
                         context.SanPham.Update(sp);
@@ -306,6 +313,11 @@ namespace QLBH.Forms
 
                 frmSanPham_Load(sender, e);
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
