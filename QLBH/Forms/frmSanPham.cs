@@ -60,6 +60,9 @@ namespace QLBH.Forms
             BatTatChucNang(false);
             LayLoaiSanPhamVaoComboBox();
             LayHangSanXuatVaoComboBox();
+            picThem.Enabled = false;
+            picXoa.Enabled = false;
+            picXoay.Enabled = false;
 
             dataGridView.AutoGenerateColumns = false;
 

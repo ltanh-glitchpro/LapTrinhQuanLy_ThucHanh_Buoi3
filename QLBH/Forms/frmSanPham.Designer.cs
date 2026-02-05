@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btnXoa = new Button();
             gpbThongTinSanPham = new GroupBox();
             btnDoiAnh = new Button();
@@ -62,12 +62,18 @@
             DonGia = new DataGridViewTextBoxColumn();
             HinhAnh = new DataGridViewImageColumn();
             gpbDanhSach = new GroupBox();
+            picXoa = new PictureBox();
+            picThem = new PictureBox();
+            picXoay = new PictureBox();
             gpbThongTinSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picHinhAnh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDonGia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numSoLuong).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             gpbDanhSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picXoa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picThem).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picXoay).BeginInit();
             SuspendLayout();
             // 
             // btnXoa
@@ -83,6 +89,9 @@
             // 
             // gpbThongTinSanPham
             // 
+            gpbThongTinSanPham.Controls.Add(picXoay);
+            gpbThongTinSanPham.Controls.Add(picThem);
+            gpbThongTinSanPham.Controls.Add(picXoa);
             gpbThongTinSanPham.Controls.Add(btnDoiAnh);
             gpbThongTinSanPham.Controls.Add(picHinhAnh);
             gpbThongTinSanPham.Controls.Add(txtMoTa);
@@ -382,7 +391,7 @@
             // HinhAnh
             // 
             HinhAnh.DataPropertyName = "HinhAnh";
-            HinhAnh.DefaultCellStyle = dataGridViewCellStyle1;
+            HinhAnh.DefaultCellStyle = dataGridViewCellStyle2;
             HinhAnh.FillWeight = 20F;
             HinhAnh.HeaderText = "Hình ảnh";
             HinhAnh.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -398,6 +407,36 @@
             gpbDanhSach.TabIndex = 7;
             gpbDanhSach.TabStop = false;
             gpbDanhSach.Text = "Danh sách sản phẩm:";
+            // 
+            // picXoa
+            // 
+            picXoa.BackgroundImage = Properties.Resources.Xóa;
+            picXoa.BackgroundImageLayout = ImageLayout.Stretch;
+            picXoa.Location = new Point(830, 97);
+            picXoa.Name = "picXoa";
+            picXoa.Size = new Size(33, 30);
+            picXoa.TabIndex = 27;
+            picXoa.TabStop = false;
+            // 
+            // picThem
+            // 
+            picThem.BackgroundImage = Properties.Resources.Thêm;
+            picThem.BackgroundImageLayout = ImageLayout.Stretch;
+            picThem.Location = new Point(830, 133);
+            picThem.Name = "picThem";
+            picThem.Size = new Size(33, 30);
+            picThem.TabIndex = 29;
+            picThem.TabStop = false;
+            // 
+            // picXoay
+            // 
+            picXoay.BackgroundImage = Properties.Resources.Xoay;
+            picXoay.BackgroundImageLayout = ImageLayout.Stretch;
+            picXoay.Location = new Point(830, 61);
+            picXoay.Name = "picXoay";
+            picXoay.Size = new Size(33, 30);
+            picXoay.TabIndex = 30;
+            picXoay.TabStop = false;
             // 
             // frmSanPham
             // 
@@ -417,6 +456,9 @@
             ((System.ComponentModel.ISupportInitialize)numSoLuong).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             gpbDanhSach.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picXoa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picThem).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picXoay).EndInit();
             ResumeLayout(false);
         }
 
@@ -464,5 +506,8 @@
         private DataGridViewTextBoxColumn SoLuong;
         private DataGridViewTextBoxColumn DonGia;
         private DataGridViewImageColumn HinhAnh;
+        private PictureBox picXoay;
+        private PictureBox picThem;
+        private PictureBox picXoa;
     }
 }
